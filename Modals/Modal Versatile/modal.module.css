@@ -1,5 +1,4 @@
 .backdrop {
-  background-color: light-dark(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -11,6 +10,18 @@
   z-index: 1000;
   overflow-y: scroll;
   padding: 2vh 0 25vh;
+}
+
+.backdrop::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: light-dark(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
+  pointer-events: none;
+  z-index: -1;
 }
 
 .animate.backdrop {
@@ -43,7 +54,7 @@
   cursor: pointer;
 }
 
-.transparent {
+.transparent::before {
   background-color: transparent;
 }
 

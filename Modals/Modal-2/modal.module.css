@@ -1,5 +1,4 @@
 .backdrop {
-  background-color: var(--modalBackdropColor);
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -13,6 +12,18 @@
   cursor: pointer;
   overflow-y: scroll;
   padding: 0 0 25vh;
+}
+
+.backdrop::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--modalBackdropColor);
+  pointer-events: none;
+  z-index: -1;
 }
 
 .backdropTop {
