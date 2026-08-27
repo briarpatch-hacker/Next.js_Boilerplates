@@ -1,6 +1,6 @@
 .backdrop {
   width: 100vw;
-  height: 100vh;
+  height: 100svh;
   position: fixed;
   top: 0;
   left: 0;
@@ -18,7 +18,7 @@
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100svh;
   background-color: light-dark(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
   pointer-events: none;
   z-index: -1;
