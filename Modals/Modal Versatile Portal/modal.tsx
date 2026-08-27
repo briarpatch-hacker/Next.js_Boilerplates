@@ -69,7 +69,7 @@ export default function Modal({
 
   //Closes the modal when user hits ESC
   const escapeKey = useCallback(
-    (e: KeyboardEvent) => {
+    (e: React.KeyboardEvent | KeyboardEvent) => {
       if (e.key === "Escape") {
         if (animate) {
           setClosing(true);
@@ -81,7 +81,7 @@ export default function Modal({
         }
       }
     },
-    [closeFunction]
+    [closeFunction, animate]
   );
 
   //Adds a keydown listener for escapeKey, and prevents the page from scrolling
@@ -96,7 +96,7 @@ export default function Modal({
         window.removeEventListener("keydown", escapeKey);
       }
     };
-  }, [escapeKey]);
+  }, [escapeKey, closeOnEscape]);
 
   //Closes the modal on click: for the backdrop and other buttons
   function closeModal(event: React.MouseEvent): void {
@@ -148,6 +148,7 @@ export default function Modal({
             <button
               className={styles.close_button}
               onClick={closeModal}
+              onKeyDown={escapeKey}
               aria-label={"Close Modal"}
               tabIndex={0}
             >
