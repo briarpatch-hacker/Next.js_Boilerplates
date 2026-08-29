@@ -187,7 +187,9 @@ export function Button(
       autoFocus={autoFocus}
       tabIndex={disabled ? -1 : tabIndex}
       style={
-        typeof width === "number" ? { width: `${width}%`, ...style } : style
+        typeof width === "number"
+          ? { width: `${width}%`, maxWidth: `${width}%`, flexShrink: "unset", ...style }
+          : style
       }
     >
       {icon && <div className={styles.icon_container}>{icon}</div>}
