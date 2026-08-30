@@ -1,0 +1,146 @@
+.selection_manager {
+  display: flex;
+  justify-content: center;
+  max-width: 90rem;
+  flex: 1;
+  position: relative;
+  padding-bottom: 6rem;
+}
+
+.content_wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.2rem;
+  row-gap: 1.2rem;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: var(--smallBorder);
+  height: 16rem;
+  width: 100%;
+}
+
+.content_wrapper > * {
+  display: flex;
+}
+
+.selection_manager_header {
+  display: flex;
+  justify-content: space-between;
+  height: 6rem;
+  width: 100%;
+}
+
+.selection_manager_header > * {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.selection_manager_header h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 2.4rem;
+  font-weight: 300;
+  font-family: "Manrope", "Segoe UI", "Roboto", "Helvetica Neue", sans-serif;
+}
+
+.trash_btn_wrapper {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.trash_btn_wrapper button {
+  height: 80%;
+}
+
+.trash_btn_wrapper svg {
+  height: 80%;
+}
+
+.delete_menu {
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 0.8rem;
+}
+
+.entries_wrapper {
+  flex-direction: column;
+  row-gap: 1.2rem;
+}
+
+.entry_row {
+  display: flex;
+  justify-content: center;
+  max-width: 98vw;
+}
+
+.select_all_wrapper {
+  display: flex;
+  align-items: center;
+  column-gap: 0.8rem;
+  animation: selectAllWrapperAppear 0.6s;
+  height: 1.8rem;
+  font-size: 1.6rem;
+}
+
+.select_all_wrapper input {
+  margin: 0 0.6rem;
+}
+
+@keyframes selectAllWrapperAppear {
+  0% {
+    height: 0;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+}
+
+.checkbox_wrapper {
+  width: 5.4rem;
+  min-width: 3rem;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  animation: checkboxWrapperAppear 0.6s;
+}
+
+@keyframes checkboxWrapperAppear {
+  0% {
+    width: 0;
+    opacity: 0;
+    min-width: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    min-width: 3rem;
+  }
+}
+
+.checkbox {
+  cursor: pointer;
+  height: 1.6rem;
+  width: 1.6rem;
+  margin-top: 2.4rem;
+}
+
+.checkbox:checked {
+  accent-color: var(--higher-color);
+}
+
+.buttons_wrapper {
+  display: flex;
+  justify-content: center;
+  column-gap: 1.2rem;
+}

@@ -1,0 +1,39 @@
+.breadcrumb {
+  display: flex;
+  column-gap: 0.6rem;
+  font-size: 2rem;
+  font-family: sans-serif;
+  width: 100%;
+  flex-wrap: wrap;
+  color: var(--grey-text);
+  width: max-content;
+  padding: 0.8rem 1.2rem 0;
+  border-radius: 1rem;
+  min-height: 5rem;
+  background-color: rgb(80, 80, 80);
+}
+
+.segment {
+  display: flex;
+  height: max-content;
+  column-gap: 0.8rem;
+  white-space: nowrap;
+}
+
+.breadcrumb a {
+  color: var(--grey-text);
+  padding-bottom: 0.1rem;
+  transition: all 0.1;
+}
+
+.breadcrumb a:hover {
+  color: white;
+  text-underline-offset: 0.4rem;
+  text-decoration: underline;
+  text-decoration-thickness: 0.1rem;
+}
+
+.dash {
+  font-weight: bolder;
+  transform: translateY(0.4rem);
+}
