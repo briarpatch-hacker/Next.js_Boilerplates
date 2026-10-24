@@ -1,0 +1,72 @@
+.track {
+  display: flex;
+  position: relative;
+  height: 1.2rem;
+  width: 100%;
+  background-color: grey;
+  cursor: pointer;
+  border-radius: 0.4rem;
+}
+
+.fill,
+.thumb,
+.thumb_label {
+  position: absolute;
+  transition: none;
+}
+
+.transition {
+  transition: all 0.2s;
+}
+
+.fill {
+  background-color: var(--grey-text);
+  border-bottom-left-radius: 2rem;
+  border-top-left-radius: 2rem;
+  height: 100%;
+}
+
+.thumb {
+  height: 2.4rem;
+  width: 1.2rem;
+  border-radius: 2.4rem;
+  transform: translateY(-0.6rem) translateX(-0.6rem);
+  background-color: white;
+  border: 0.1rem solid black;
+  outline: 0.2rem solid transparent;
+}
+
+.thumb:focus {
+  background-color: rgb(215, 220, 255);
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-outline-offset);
+}
+
+.thumb_label {
+  left: 50%;
+  transform: translateX(-50%) translateY(-2.7rem);
+  color: var(--grey-text);
+  font-size: 1.6rem;
+}
+
+.text_wrapper {
+  user-select: none;
+  cursor: pointer;
+}
+
+.thumb_input {
+  all: unset;
+  box-sizing: border-box;
+  field-sizing: content;
+  text-align: center;
+  color: var(--grey-text);
+  font-size: 1.6rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 0.3rem;
+  cursor: text;
+}
+
+.thumb_input:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-outline-offset);
+}

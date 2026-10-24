@@ -1,0 +1,5 @@
+.error_wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
